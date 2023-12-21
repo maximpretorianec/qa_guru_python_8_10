@@ -1,9 +1,9 @@
-from pages.Registration import Registration
+from pages.registration_page import Registration
 
 
-def test_form(create_user):
+def test_user_registration_form():
     registration_page = Registration()
 
-    registration_page.register_user(create_user)
+    registration_page.register_user()
 
-    registration_page.assert_registration_data(create_user)
+    registration_page.assert_registration_data()
