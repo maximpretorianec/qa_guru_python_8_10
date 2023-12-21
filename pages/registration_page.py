@@ -1,5 +1,4 @@
-from selene.support.conditions import have, be
-from selene.support.shared import browser
+from selene import have, be, browser
 from utils.load_file import path
 
 import random

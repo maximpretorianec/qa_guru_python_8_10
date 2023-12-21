@@ -1,7 +1,7 @@
-from pages.Registration import Registration
+from pages.registration_page import Registration
 
 
-def test_form():
+def test_user_registration_form():
     test_data = {'first_name': 'RandomName', 'last_name': 'RandomFamilyName', 'email': 'user@qa.com',
                  'mobile': '9991111111', 'address': 'Street', 'subject': 'Arts',
                  'birth_day': 24, 'birth_month': 'September', 'birth_year': 1993, 'picture': 'Duck.jpg',
