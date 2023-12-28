@@ -5,6 +5,9 @@ from models.user import test_user_data
 
 class Registration:
 
+    def open(self):
+        browser.open('/automation-practice-form')
+
     def register_user(self):
         browser.element("#firstName").type(test_user_data.first_name)
         browser.element("#lastName").type(test_user_data.last_name)
