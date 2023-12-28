@@ -6,6 +6,9 @@ import random
 
 class Registration:
 
+    def open(self):
+        browser.open('/automation-practice-form')
+
     def set_first_name(self, first_name):
         browser.element("#firstName").type(first_name)
 
@@ -24,17 +27,11 @@ class Registration:
     def set_subject(self, subject):
         browser.element("#subjectsInput").type(subject).press_enter()
 
-    def select_gender(self):
-        random_gender = str(random.randint(1, 3))
-        gender_dict = {"1": "Male", "2": "Female", "3": "Other"}
-        browser.element('[for="gender-radio-' + random_gender + '"]').click()
-        return gender_dict[random_gender]
+    def set_gender(self):
+        browser.element('[for="gender-radio-1"]').click()
 
-    def select_hobbies(self):
-        random_hobbies = str(random.randint(1, 3))
-        hobbies_dict = {"1": "Sports", "2": "Reading", "3": "Music"}
-        browser.element('[for="hobbies-checkbox-' + random_hobbies + '"]').click()
-        return hobbies_dict[random_hobbies]
+    def set_hobbies(self):
+        browser.element('[for="hobbies-checkbox-3"]').click()
 
     def select_state(self, state):
         browser.element("#state").click().all('[id^="react-select-3-option"]').element_by(have.exact_text(state)).click()
