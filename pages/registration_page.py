@@ -1,8 +1,6 @@
 from selene import have, be, browser
 from utils.load_file import path
 
-import random
-
 
 class Registration:
 
